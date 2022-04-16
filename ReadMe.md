@@ -6,3 +6,20 @@ Starter configurations for a django project, deployed with docker compose
 This dockerized setup adds support for:
 - Redis
 - Celery
+
+
+## Setup
+
+Copy the contents of your django project folder into the app directory
+
+```shell
+cp -R my_project/* app/
+```
+
+### Environment variables
+Copy from the sample.env file and update to match your app settings
+
+```shell
+cp sample.env .env
+```
+Add other environment variables used by your application to the `.env` file
