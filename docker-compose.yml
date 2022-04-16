@@ -23,8 +23,10 @@ services:
     image: redis:latest
     restart: always
     command: [ "redis-server", "--bind", "redis", "--port", "6379" ]
-    ports:
-      - "${REDIS_PORT}:6379"
+    env_file:
+      - .env
+    expose:
+      - 6379
     networks:
       - app
   celery:
